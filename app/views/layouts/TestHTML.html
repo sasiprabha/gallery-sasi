@@ -1,21 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-  <title>PhoneGallery</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag    "Phone_Gallery", :media => "all" %>
-  <%= stylesheet_link_tag    "ListElement", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery-1.7.1.js" ></script>
+        <script type="text/javascript" src="js/TestHTML.js" ></script>
+        <link rel="stylesheet" type="text/CSS" href="style/TestHTML.css">
+        <link rel="stylesheet" type="text/CSS" href="style/ListElement.css">
+    </head>
+    <body>
 
-
-
-
-
-
-<body>
-<div id="top-bar">
+        <div id="top-bar">
             <form>
             <span id="search-box" >
                 <input type="text" style="width: 85%;float: left;border: 0px;outline: none;">
@@ -147,7 +142,6 @@
             
 
         </div>
-<%= yield %>
 
-</body>
+    </body>
 </html>
