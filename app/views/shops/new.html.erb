@@ -1,0 +1,19 @@
+<%= form_for(@shop) do |f| %>
+
+      <%= f.label :name %><br>
+      <%= f.text_field :name %><br>
+      <br><br>
+      <%= f.label :address %><br>
+      <%= f.text_field :address %><br>
+      <br><br>
+      <%= f.label :phone_no %><br>
+      <%= f.text_field :phone_no %><br>
+      <br><br>
+      <%= f.label :password %><br>
+      <%= f.text_field :password %><br>
+      <br><br>
+      <%= f.label :password_confirmation %><br>
+      <%= f.text_field :password_confirmation %><br>
+      <br><br>
+      <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+<% end %>

@@ -1,8 +1,17 @@
 PhoneGallery::Application.routes.draw do
-  get "gallery/shop"
+ 
+  
+  match '/change/:id', :controller => 'shops', :action => 'update'
+  match '/dochange/:id', :controller => 'shops', :action => 'doupdate'
+  
+  resources :gallery
+  resources :phones
+  resources :shops
 
-  get "gallery/home"
-
+  root to: 'gallery#show'
+  match '/home', to: 'gallery#home'
+  match '/shop', to: 'gallery#shop'
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -7,6 +7,9 @@
   <%= stylesheet_link_tag    "ListElement", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 </head>
 
 
@@ -15,131 +18,42 @@
 
 
 <body>
+
 <div id="top-bar">
             <form>
             <span id="search-box" >
                 <input type="text" style="width: 85%;float: left;border: 0px;outline: none;">
                 <button type="submit" style="width: 9%;float: right;"> </button>
             </span>
+</div>
 </form>
-        </div>
+        
         <div id ="main-body">
             <div id="list" class="middle-elements">
-                <div class="list-element">
-                    <span class="list-element-heading">Heading of the fun place</span>
+                
+               <% Shop.all.each{|s| %>
+               
+               
+                
+                <%= link_to  :controller => "gallery", :action => "show", :id => s.name do %>
+                <div class="list-element" id = "<%= s.name %>">
+                    <span class="list-element-heading"> <%= s.name %></span>
                     <br>
-                    <span class="list-element-detali">address of the fun place</span>
+                    <span class="list-element-detali"><%= s.address %></span>
                     <br>
-                    <span class="list-element-link"><a href="">www.link.com</a></span>
+                   <!-- <span class="list-element-link"><a href="">www.link.com</a></span> -->
                     <br>
-                    <span class="list-element-tag" > tag</span>
+                    <span class="list-element-tag" > <%= s.phone_no %></span>
                 </div>
-                <div class="list-element">
-                    <span class="list-element-heading">Heading of the fun place</span>
-                    <br>
-                    <span class="list-element-detali">address of the fun place</span>
-                    <br>
-                    <span class="list-element-link"><a href="">www.link.com</a></span>
-                    <br>
-                    <span class="list-element-tag" > tag</span>
-                </div>
-                <div class="list-element">
-                    <span class="list-element-heading">Heading of the fun place</span>
-                    <br>
-                    <span class="list-element-detali">address of the fun place</span>
-                    <br>
-                    <span class="list-element-link"><a href="">www.link.com</a></span>
-                    <br>
-                    <span class="list-element-tag" > tag</span>
-                </div>
-                <div class="list-element">
-                    <span class="list-element-heading">Heading of the fun place</span>
-                    <br>
-                    <span class="list-element-detali">address of the fun place</span>
-                    <br>
-                    <span class="list-element-link"><a href="">www.link.com</a></span>
-                    <br>
-                    <span class="list-element-tag" > tag</span>
-                </div>
-                <div class="list-element">
-                    <span class="list-element-heading">Heading of the fun place</span>
-                    <br>
-                    <span class="list-element-detali">address of the fun place</span>
-                    <br>
-                    <span class="list-element-link"><a href="">www.link.com</a></span>
-                    <br>
-                    <span class="list-element-tag" > tag</span>
-                </div>
-                <div class="list-element">
-                    <span class="list-element-heading">Heading of the fun place</span>
-                    <br>
-                    <span class="list-element-detali">address of the fun place</span>
-                    <br>
-                    <span class="list-element-link"><a href="">www.link.com</a></span>
-                    <br>
-                    <span class="list-element-tag" > tag</span>
-                </div>
-                <div class="list-element">
-                    <span class="list-element-heading">Heading of the fun place</span>
-                    <br>
-                    <span class="list-element-detali">address of the fun place</span>
-                    <br>
-                    <span class="list-element-link"><a href="">www.link.com</a></span>
-                    <br>
-                    <span class="list-element-tag" > tag</span>
-                </div>
-            </div>
-            <div class="gallery">
 
-            <div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
-            </div>
-<div class="phone-box middle-elements">
-                <img src="img/a.jpg" alt="image" style="height: 100%;width: 100%;">
-                <span class="phone-price">Rs 50,000</span>
+                <% end %>
+                <% } %>
+            
             </div>
 
+            
+<%= yield %>
+<%= debug(params) if Rails.env.development? %>
 </div>
             
 
@@ -147,7 +61,7 @@
             
 
         </div>
-<%= yield %>
+
 
 </body>
 </html>

@@ -1,0 +1,15 @@
+<%= form_for(@phone) do |f| %>
+
+      <%= f.label :model %><br>
+      <%= f.text_field :model %><br>
+<br><br>
+      <%= f.label :manufacturer %><br>
+      <%= f.text_field :manufacturer %><br>
+      <br><br>
+      <%= f.label :img_url %><br>
+      <%= f.text_field :img_url %><br>
+<br><br>
+      <%= f.submit "Add Phone", class: "btn btn-large btn-primary" %>
+    <% end %>
+<h1>Gallery#shop</h1>
+<p>Find me in app/views/gallery/shop.html.erb</p>

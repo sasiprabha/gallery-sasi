@@ -1,0 +1,21 @@
+
+<div class="gallery">
+            <%  %>
+            <%  %>
+            <% unless @shop.id.nil? %>
+            <% PhonesInShops.find_each(:conditions => "shop_id = "+@shop.id.to_s) do |ps| %>
+            <div class="phone-box middle-elements">
+                <%= image_tag(Phone.find(ps.phone_id).img_url.to_s, :alt => "image", :style=> "height: 100%;") %>
+                <!--<img src="images/img/a.jpg" alt="image" style="height: 100%;width: 100%;">-->
+                <span class="phone-price"><% unless ps.price.nil? %>
+                <%= ps.price %>
+                <% else %>
+                10,000
+                <% end %>
+                </span>
+            </div>
+            <% end %>
+            <% end %>
+
+<h1>Gallery#shop</h1>
+<p>Find me in app/views/gallery/shop.html.erb</p>

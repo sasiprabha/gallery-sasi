@@ -11,6 +11,12 @@
    Syntax recommendation http://www.w3.org/TR/REC-CSS2/
 */
 
+
+a{
+
+text-decoration:none;
+}
+
 root { 
     display: block;
 }

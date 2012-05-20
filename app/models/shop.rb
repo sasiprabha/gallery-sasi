@@ -4,4 +4,12 @@ class Shop < ActiveRecord::Base
   has_secure_password
   validates :password, length: { minimum: 6 }
   validates :password_confirmation, presence: true
+  
+  has_many :phones_in_shops
+
+  after_create do
+    Phone.all.each do |p|
+      PhonesInShops.create(shop_id: id,phone_id: p.id)
+    end
+  end
 end

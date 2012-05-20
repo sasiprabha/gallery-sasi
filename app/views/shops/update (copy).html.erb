@@ -1,0 +1,19 @@
+
+
+
+<div class="gallery">
+
+
+
+<%= form_tag '/dochange/'+@shop.name do %>
+<div class="phone-box middle-elements">
+    <%= image_tag(Phone.find(@phone.phone_id).img_url.to_s, :alt => "image", :style=> "height: 100%;") %>
+    <%= fields_for @phone do |p|%>
+      <%= p.text_field :price %>
+      <%= p.submit %>
+    <% end %>
+</div>
+  <% end %>  
+<%= params.keys %>
+<!--% end %-->
+

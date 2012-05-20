@@ -1,0 +1,24 @@
+
+
+
+<div class="gallery">
+
+
+<% @phone.each do |ph| %>
+
+<div class="phone-box middle-elements">
+<%= image_tag(Phone.find(ph.phone_id).img_url.to_s, :alt => "image", :style=> "height: 100%;") %>
+<%= form_tag '/dochange/'+@shop.name do %>
+    
+    <%= fields_for ph do |p|%>
+      <%= p.hidden_field :id, :value => ph.id %>
+      <%= p.text_field :price, :size => 10 %>
+      <%= p.submit "update" %>
+  <% end %>
+  <% end %>
+</div>
+    
+  <% end %>  
+<%= params.keys %>
+<!--% end %-->
+
